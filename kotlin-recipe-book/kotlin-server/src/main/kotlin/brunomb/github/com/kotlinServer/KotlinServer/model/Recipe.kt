@@ -1,4 +1,7 @@
 package brunomb.github.com.kotlinServer.KotlinServer.model
 
-data class Recipe(val title: String = "",
-                  val description: String = "")
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+data class Recipe(val id: String = "",
+                  val name: String = "")
